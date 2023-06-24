@@ -19,6 +19,11 @@ use Phalcon\Support\Version as PhVersion;
  */
 class Version extends PhVersion
 {
+    public function get(): string
+    {
+        return implode('.',self::_getVersion());
+    }
+
     /**
      * {@inheritdoc}
      *
@@ -27,7 +32,7 @@ class Version extends PhVersion
     // phpcs:disable
     protected static function _getVersion(): array
     {
-        return [4, 1, 0, 0, 0];
+        return [5,0,0];
     }
     // phpcs:enable
 }
