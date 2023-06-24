@@ -14,7 +14,7 @@ namespace Phalcon\DevTools\Validation\Validator;
 
 use Phalcon\Messages\Message;
 use Phalcon\Filter\Validation;
-use Phalcon\Validation\AbstractValidator;
+use Phalcon\Filter\Validation\AbstractValidator;
 
 /**
  * Check for namespace
