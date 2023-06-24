@@ -42,7 +42,7 @@ use Phalcon\Di\DiInterface;
 use Phalcon\Di\FactoryDefault;
 use Phalcon\Di\ServiceProviderInterface;
 use Phalcon\Mvc\Application as MvcApplication;
-use Phalcon\Text;
+use Phalcon\Support\HelperFactory;
 
 /**
  * @method mixed getShared($name, $parameters=null)

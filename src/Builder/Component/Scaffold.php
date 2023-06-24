@@ -18,7 +18,7 @@ use Phalcon\DevTools\Builder\Exception\BuilderException;
 use Phalcon\DevTools\Script\Color;
 use Phalcon\DevTools\Utils;
 use Phalcon\Di\FactoryDefault;
-use Phalcon\Text;
+use Phalcon\Support\HelperFactory;
 
 /**
  * Build CRUDs using Phalcon

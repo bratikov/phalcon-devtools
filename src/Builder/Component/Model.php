@@ -23,7 +23,7 @@ use Phalcon\DevTools\Exception\WriteFileException;
 use Phalcon\DevTools\Generator\Snippet;
 use Phalcon\DevTools\Options\OptionsAware as ModelOption;
 use Phalcon\DevTools\Utils;
-use Phalcon\Text;
+use Phalcon\Support\HelperFactory;
 use Phalcon\Validation;
 use Phalcon\Validation\Validator\Email as EmailValidator;
 use ReflectionClass;

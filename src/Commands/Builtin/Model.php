@@ -19,7 +19,7 @@ use Phalcon\DevTools\Builder\Exception\BuilderException;
 use Phalcon\DevTools\Commands\Command;
 use Phalcon\DevTools\Script\Color;
 use Phalcon\DevTools\Utils;
-use Phalcon\Text;
+use Phalcon\Support\HelperFactory;
 
 /**
  * Model Command

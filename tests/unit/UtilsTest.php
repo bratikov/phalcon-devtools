@@ -15,7 +15,7 @@ namespace Phalcon\DevTools\Tests\Unit;
 
 use Phalcon\DevTools\Utils;
 use Phalcon\DevTools\Tests\Support\Module\UnitTest;
-use Phalcon\Text;
+use Phalcon\Support\HelperFactory;
 
 final class UtilsTest extends UnitTest
 {

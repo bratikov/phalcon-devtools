@@ -24,7 +24,7 @@ use Phalcon\Http\ResponseInterface;
 use Phalcon\Mvc\Dispatcher;
 use Phalcon\Mvc\DispatcherInterface;
 use Phalcon\Tag;
-use Phalcon\Text;
+use Phalcon\Support\HelperFactory;
 
 /**
  * @property Dispatcher|DispatcherInterface $dispatcher
