@@ -14,7 +14,7 @@ namespace Phalcon\DevTools\Utils;
 
 use Phalcon\DevTools\Version;
 use Phalcon\Di\Injectable;
-use Phalcon\Registry;
+use Phalcon\Support\Registry;
 use Phalcon\Url;
 use Phalcon\Url\UrlInterface;
 use Phalcon\Version as PhVersion;
