@@ -24,7 +24,7 @@ use Phalcon\DevTools\Generator\Snippet;
 use Phalcon\DevTools\Options\OptionsAware as ModelOption;
 use Phalcon\DevTools\Utils;
 use Phalcon\Support\HelperFactory;
-use Phalcon\Validation;
+use Phalcon\Filter\Validation;
 use Phalcon\Validation\Validator\Email as EmailValidator;
 use ReflectionClass;
 use ReflectionClassConstant;

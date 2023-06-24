@@ -13,7 +13,7 @@ declare(strict_types=1);
 namespace Phalcon\DevTools\Validation\Validator;
 
 use Phalcon\Messages\Message;
-use Phalcon\Validation;
+use Phalcon\Filter\Validation;
 use Phalcon\Validation\AbstractValidator;
 
 /**
