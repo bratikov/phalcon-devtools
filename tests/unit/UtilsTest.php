@@ -104,15 +104,15 @@ final class UtilsTest extends UnitTest
     public function shouldUncamelizeString()
     {
         $this->specify(
-            "Method Text::uncamelize hasn't returned proper string",
+            "Method uncamelize hasn't returned proper string",
             function ($string, $expected) {
                 expect($string)->equals($expected);
             },
             [
                 'examples' => [
-                    [Text::uncamelize('MyFooBar'), 'my_foo_bar'],
-                    [Text::uncamelize('MyFooBar', '-'), 'my-foo-bar'],
-                    [Text::uncamelize('MyFooBar', '_'), 'my_foo_bar']
+                    [(new HelperFactory)->uncamelize('MyFooBar'), 'my_foo_bar'],
+                    [(new HelperFactory)->uncamelize('MyFooBar', '-'), 'my-foo-bar'],
+                    [(new HelperFactory)->uncamelize('MyFooBar', '_'), 'my_foo_bar']
                 ]
             ]
         );

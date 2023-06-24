@@ -73,7 +73,7 @@ class Model extends Command
                 'schema'            => $this->getOption('schema'),
                 'config'            => $this->getConfigObject(),
                 'className'         => $className,
-                'fileName'          => Text::uncamelize($className),
+                'fileName'          => (new HelperFactory)->uncamelize($className),
                 'genSettersGetters' => $this->isReceivedOption('get-set'),
                 'genDocMethods'     => $this->isReceivedOption('doc'),
                 'namespace'         => $this->getOption('namespace'),

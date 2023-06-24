@@ -53,6 +53,11 @@ class Model extends AbstractComponent
     protected $modelOptions;
 
     /**
+     * String helper
+     */
+    private $helper;
+
+    /**
      * Create Builder object
      *
      * @param array $options
@@ -60,6 +65,7 @@ class Model extends AbstractComponent
      */
     public function __construct(array $options)
     {
+        $this->helper = new HelperFactory();
         $this->modelOptions = new ModelOption($options);
 
         if (!$this->modelOptions->hasOption('name')) {
@@ -177,9 +183,9 @@ class Model extends AbstractComponent
                 $initialize[] = $snippet->getRelation(
                     'hasMany',
                     $this->getFieldName($refColumns[0]),
-                    $entityNamespace . Text::camelize($tableName, '_-'),
+                    $entityNamespace . $this->helper->camelize($tableName, '_-'),
                     $this->getFieldName($columns[0]),
-                    "['alias' => '" . Text::camelize($tableName, '_-') . "']"
+                    "['alias' => '" . $this->helper->camelize($tableName, '_-') . "']"
                 );
             }
         }
@@ -195,7 +201,7 @@ class Model extends AbstractComponent
                 $this->getFieldName($columns[0]),
                 $this->getEntityClassName($reference, $entityNamespace),
                 $this->getFieldName($refColumns[0]),
-                "['alias' => '" . Text::camelize($reference->getReferencedTable(), '_-') . "']"
+                "['alias' => '" . $this->helper->camelize($reference->getReferencedTable(), '_-') . "']"
             );
         }
 
@@ -212,7 +218,7 @@ class Model extends AbstractComponent
                 if ($useSettersGetters) {
                     foreach ($fields as $field) {
                         /** @var \Phalcon\Db\Column $field */
-                        $methodName = Text::camelize($field->getName(), '_-');
+                        $methodName = $this->helper->camelize($field->getName(), '_-');
 
                         $possibleMethods['set' . $methodName] = true;
                         $possibleMethods['get' . $methodName] = true;
@@ -494,7 +500,7 @@ class Model extends AbstractComponent
         if ($this->isConsole()) {
             $msgSuccess = ($this->modelOptions->getOption('abstract') ? 'Abstract ' : '');
             $msgSuccess .= 'Model "%s" was successfully created.';
-            $this->notifySuccess(sprintf($msgSuccess, Text::camelize($this->modelOptions->getOption('name'), '_-')));
+            $this->notifySuccess(sprintf($msgSuccess, $this->helper->camelize($this->modelOptions->getOption('name'), '_-')));
         }
     }
 

@@ -64,7 +64,7 @@ class ScaffoldController extends Base
                 $scaffoldBuilder->build();
 
                 $this->flashSession->success(
-                    sprintf('Scaffold for table "%s" was generated successfully', Text::camelize($tableName))
+                    sprintf('Scaffold for table "%s" was generated successfully', (new HelperFactory)->camelize($tableName))
                 );
 
                 return $this->response->redirect('/webtools.php/migrations/list');

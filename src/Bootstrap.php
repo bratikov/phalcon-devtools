@@ -403,7 +403,7 @@ class Bootstrap
      */
     public function setParameter(string $parameter, $value): Bootstrap
     {
-        $method = 'set' . Text::camelize($parameter);
+        $method = 'set' . (new HelperFactory)->camelize($parameter);
 
         if (method_exists($this, $method)) {
             $this->$method($value);

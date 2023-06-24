@@ -227,7 +227,7 @@ class ModelsController extends Base
                 } else {
                     $message = sprintf(
                         'Model "%s" was created successfully',
-                        Text::camelize(basename($tableName, '.php'))
+                        (new HelperFactory)->camelize(basename($tableName, '.php'))
                     );
                 }
 

@@ -46,7 +46,7 @@ class FsUtils
         $normalized = preg_replace('#/\.(?=/)|^\./|(/|^)\./?$#', '', $normalized);
         $normalized = str_replace(['\\', '/'], DS, $normalized);
 
-        return Text::reduceSlashes($normalized);
+        return (new HelperFactory)->reduceSlashes($normalized);
     }
 
     /**
