@@ -32,7 +32,7 @@ use Phalcon\Mvc\View;
 use Phalcon\Support\Registry;
 use Phalcon\Mvc\Url;
 use Phalcon\Url\UrlInterface;
-use Phalcon\Version as PhVersion;
+use Phalcon\Support\Version as PhVersion;
 
 /**
  * @property Config $config
