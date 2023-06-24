@@ -29,8 +29,6 @@ class DotPhalconMissingException extends CommandsException implements ISelfHeali
     {
         $this->message = $message;
         $this->code = $code;
-
-        parent::__construct();
     }
 
     public function scanPathMessage(): string
