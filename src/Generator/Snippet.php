@@ -265,9 +265,9 @@ EOD;
      * Allows to query the first record that match the specified conditions
      *
      * @param mixed \$parameters
-     * @return %s|\Phalcon\Mvc\Model\ResultInterface|\Phalcon\Mvc\ModelInterface|null
+     * @return %s|\Phalcon\Mvc\Model\Row|null
      */
-    public static function findFirst(\$parameters = null): ?\Phalcon\Mvc\ModelInterface
+    public static function findFirst(\$parameters = null): ?\Phalcon\Mvc\Model\Row
     {
         return parent::findFirst(\$parameters);
     }
