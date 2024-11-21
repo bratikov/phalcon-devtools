@@ -46,6 +46,7 @@ EOD;
             '',
             $options,
             'BaseClass',
+            '',
             ''
         );
 

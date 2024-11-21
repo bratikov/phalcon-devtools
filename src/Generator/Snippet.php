@@ -84,12 +84,12 @@ EOD;
     public function getClass(
         string $namespace,
         string $useDefinition,
-        string $classDoc = '',
-        string $abstract = '',
+        string $classDoc,
+        string $abstract,
         ModelOption $modelOptions,
-        string $extends = '',
+        string $extends,
         string $content,
-        string $license = ''
+        string $license
     ): string {
         $templateCode = <<<EOD
 <?php

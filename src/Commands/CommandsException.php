@@ -15,6 +15,6 @@ namespace Phalcon\DevTools\Commands;
 /**
  * Commands Exception
  */
-class CommandsException
+class CommandsException extends \Exception
 {
 }

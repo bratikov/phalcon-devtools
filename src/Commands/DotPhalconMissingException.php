@@ -25,6 +25,9 @@ class DotPhalconMissingException extends CommandsException implements ISelfHeali
     const DEFAULT_MESSAGE = "This command must be run inside a Phalcon project with a .phalcon directory.";
     const RESOLUTION_PROMPT = "Shall I create the .phalcon directory now? (y/n)";
 
+    protected string $message;
+    protected string $code;
+
     public function __construct($message = self::DEFAULT_MESSAGE, $code = 0)
     {
         $this->message = $message;
